@@ -149,7 +149,8 @@ function getInput()
   rightArrowColor = "orange"
   index = index + 1 > 7 and 1 or index + 1
  elseif (key["0"] or key["numpad0"]) and (not prevKey["0"] and not prevKey["numpad0"]) then
-  printDebug = not printDebug
+ printDebug = not printDebug
+ print("Debug printing: "..(printDebug and "Enabled" or "Disabled"))
  end
 
  prevKey = key
@@ -164,6 +165,7 @@ function checkDebugKey()
 
  if (key["0"] or key["numpad0"]) and (not prevKey["0"] and not prevKey["numpad0"]) then
   printDebug = not printDebug
+  print("Debug printing: "..(printDebug and "Enabled" or "Disabled"))
  end
 
  prevKey = key

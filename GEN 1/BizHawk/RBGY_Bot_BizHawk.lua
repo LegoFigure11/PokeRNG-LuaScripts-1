@@ -158,6 +158,7 @@ function getInput()
   index = index + 1 > 7 and 1 or index + 1
  elseif (key["Number0"] or key["KeyPad0"]) and (not prevKey["Number0"] and not prevKey["KeyPad0"]) then
   printDebug = not printDebug
+  print("Debug printing: "..(printDebug and "Enabled" or "Disabled"))
  end
 
  prevKey = key
@@ -172,6 +173,7 @@ function checkDebugKey()
 
  if (key["Number0"] or key["KeyPad0"]) and (not prevKey["Number0"] and not prevKey["KeyPad0"]) then
   printDebug = not printDebug
+  print("Debug printing: "..(printDebug and "Enabled" or "Disabled"))
  end
 
  prevKey = key
